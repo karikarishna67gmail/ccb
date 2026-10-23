@@ -1,0 +1,6 @@
+{
+  "name": "Coaching Community of Bharat (CCB)",
+  "description": "Premium business consulting and mentorship platform helping Indian entrepreneurs, coaches, trainers, and startups scale to ₹1 Crore and beyond.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
