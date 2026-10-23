@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall, Shield, ChevronRight } from 'lucide-react';
 import { LeadStorageService } from '../services/leadService';
+import { ThemeSelector } from './ThemeSelector';
 
 interface NavbarProps {
   onOpenConsultation: () => void;
@@ -95,12 +96,15 @@ export const Navbar: React.FC<NavbarProps> = ({
             </nav>
 
             {/* Right Action Buttons */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-1.5 sm:gap-2.5">
+              {/* Theme Selector */}
+              <ThemeSelector />
+
               {/* Lead Desk / Consultant Vault */}
               <button
                 onClick={onOpenLeadDesk}
                 title="Open Consultant Lead Desk (Admin Vault)"
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-md transition-colors cursor-pointer"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 hover:text-slate-950 bg-slate-100 hover:bg-slate-200 border border-slate-300 rounded-md transition-colors cursor-pointer"
               >
                 <Shield className="w-3.5 h-3.5 text-amber-700" />
                 <span>Lead Desk</span>
@@ -188,6 +192,14 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
 
             <div className="pt-6 border-t border-slate-200 space-y-3">
+              {/* Theme Selector Row */}
+              <div className="flex items-center justify-between p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                <span className="text-xs font-semibold text-slate-800">
+                  Workspace Theme:
+                </span>
+                <ThemeSelector />
+              </div>
+
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);

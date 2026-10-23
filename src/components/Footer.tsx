@@ -1,6 +1,7 @@
 import React from 'react';
 import { Shield, Lock, FileText, ChevronRight, PhoneCall, Heart } from 'lucide-react';
 import { BRAND_INFO } from '../data/mockData';
+import { ThemeSelector } from './ThemeSelector';
 
 interface FooterProps {
   onOpenPrivacy: () => void;
@@ -183,11 +184,18 @@ export const Footer: React.FC<FooterProps> = ({
             <button
               type="button"
               onClick={onOpenConsultantDesk}
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-md transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-300 hover:text-white bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-md transition-colors cursor-pointer w-full justify-center"
             >
               <Shield className="w-3.5 h-3.5 text-amber-500" />
               <span>Consultant Lead Desk</span>
             </button>
+
+            <div className="pt-2">
+              <span className="text-[10px] text-slate-500 uppercase tracking-wider block mb-1">
+                Visual Theme
+              </span>
+              <ThemeSelector />
+            </div>
           </div>
 
         </div>

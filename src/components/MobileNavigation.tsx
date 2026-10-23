@@ -15,6 +15,7 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import { BRAND_INFO } from '../data/mockData';
+import { ThemeSelector } from './ThemeSelector';
 
 interface MobileNavigationProps {
   onSelectSection: (sectionId: string) => void;
@@ -185,6 +186,14 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
 
             {/* Drawer Bottom Actions */}
             <div className="p-4 bg-slate-50 border-t border-slate-200 space-y-2.5 mb-14">
+              {/* Theme Selector Row */}
+              <div className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200 shadow-2xs">
+                <span className="text-xs font-semibold text-slate-800">
+                  Select Theme:
+                </span>
+                <ThemeSelector />
+              </div>
+
               <button
                 type="button"
                 onClick={() => {
